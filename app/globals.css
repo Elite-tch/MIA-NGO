@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-navy: #0D2B59;
+    --color-navy-dark: #081B38;
+    --color-navy-light: #163E7A;
+    --color-sky: #0088D6;
+    --color-sky-hover: #0077BE;
+    --color-sky-light: #E0F2FE;
+    --color-rose: #D81B60;
+    --color-rose-hover: #BA1350;
+    --color-rose-light: #FCE7F0;
+    --color-ice: #F0F7FD;
+    --color-canvas: #FFFFFF;
+    --color-ink: #1E293B;
+    --color-muted: #64748B;
+    --color-border: #E2E8F0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+  }
+
+  body {
+    background-color: var(--color-canvas);
+    color: var(--color-ink);
+    font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-jakarta), var(--font-inter), sans-serif;
+    color: var(--color-navy);
+    font-weight: 700;
+    letter-spacing: -0.025em;
+  }
+}
+
+/* Custom UI Utilities */
+.btn-rose {
+  background-color: #D81B60;
+  color: #FFFFFF;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 14px rgba(216, 27, 96, 0.25);
+}
+.btn-rose:hover {
+  background-color: #BA1350;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(216, 27, 96, 0.35);
+}
+
+.btn-navy {
+  background-color: #0D2B59;
+  color: #FFFFFF;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 14px rgba(13, 43, 89, 0.20);
+}
+.btn-navy:hover {
+  background-color: #081B38;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(13, 43, 89, 0.30);
+}
+
+.btn-sky {
+  background-color: #0088D6;
+  color: #FFFFFF;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.btn-sky:hover {
+  background-color: #0077BE;
+  transform: translateY(-1px);
+}
+
+.btn-outline-navy {
+  border: 1.5px solid #0D2B59;
+  color: #0D2B59;
+  background: transparent;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.btn-outline-navy:hover {
+  background: #0D2B59;
+  color: #FFFFFF;
+  transform: translateY(-1px);
+}
+
+.card-hover {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.card-hover:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 36px -10px rgba(13, 43, 89, 0.12);
+}
