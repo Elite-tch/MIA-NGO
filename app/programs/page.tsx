@@ -1,4 +1,4 @@
-﻿import Link from "next/link";
+import Link from "next/link";
 
 export default function Programs_Page() {
   return (
@@ -10,14 +10,14 @@ export default function Programs_Page() {
         Coming Soon
       </h1>
       <p className="text-base text-[#64748B] max-w-md leading-relaxed mb-8">
-        This page is currently being developed. We're working hard to bring you something great.
+        This page is currently being developed. We are working hard to bring you something great.
       </p>
       <Link
         href="/"
         className="btn-rose px-7 py-3.5 rounded-full text-sm font-bold inline-flex items-center gap-2"
       >
         <span>Back to Home</span>
-        <span>→</span>
+        <span>?</span>
       </Link>
     </div>
   );

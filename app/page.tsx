@@ -198,7 +198,7 @@ export default function HomePage() {
                 Maternal Initiative Africa (MIA) is a nurse-led non-governmental organisation dedicated to reducing preventable maternal and child deaths across Sub-Saharan Africa.
               </p>
               <p className="text-base text-[#475569] leading-relaxed">
-                Founded on the conviction that every mother deserves access to skilled, compassionate care regardless of geography or income, MIA bridges the gap between underserved communities and the clinical expertise they need. Through telehealth, community outreach, health education, data research, and the Africa Nurses Network, we address the systemic, practical, and human barriers that drive Africa's maternal health crisis.
+                Founded on the conviction that every mother deserves access to skilled, compassionate care regardless of geography or income, MIA bridges the gap between underserved communities and the clinical expertise they need. Through telehealth, community outreach, health education, data research, and the Africa Nurses Network, we address the systemic, practical, and human barriers that drive Africa&apos;s maternal health crisis.
               </p>
               <p className="text-base text-[#475569] leading-relaxed">
                 Our work is rooted in local communities, validated by evidence, and amplified through continental collaboration — because lasting change in maternal health cannot happen in isolation.
@@ -263,7 +263,7 @@ export default function HomePage() {
               </div>
               <div className="border-t border-white/10 pt-4">
                 <p className="text-xs text-slate-300 leading-relaxed italic">
-                  "No mother should be left behind because of distance, lack of information, or lack of access to care."
+                  &ldquo;No mother should be left behind because of distance, lack of information, or lack of access to care.&rdquo;
                 </p>
                 <span className="text-[10px] text-[#0088D6] font-bold mt-1 block">— MIA Founding Principle</span>
               </div>
