@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Plus_Jakarta_Sans, Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
@@ -16,6 +16,11 @@ const inter = Inter({
   weight: ["400", "500", "600", "700"],
 });
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+};
+
 export const metadata: Metadata = {
   title: "Maternal Initiative Africa | Connecting Nurses. Reaching Mothers.",
   description:
@@ -31,7 +36,6 @@ export const metadata: Metadata = {
     "Nestory Millanzi",
   ],
   authors: [{ name: "Maternal Initiative Africa" }],
-  viewport: "width=device-width, initial-scale=1",
 };
 
 export default function RootLayout({
