@@ -1,6 +1,17 @@
 import Link from "next/link";
 import Image from "next/image";
-export default function HomePage() {
+import ImpactGallery from "./components/ImpactGallery";
+import { getStoredResources } from "./lib/db";
+import { stripHtml, sortByLatest } from "./lib/utils";
+
+export const dynamic = "force-dynamic";
+
+export default async function HomePage() {
+  const allResources = await getStoredResources();
+  const publishedPosts = sortByLatest(
+    allResources.filter((r) => r.status !== "draft")
+  );
+  const latestPosts = publishedPosts.slice(0, 4);
   const coreServices = [
     {
       number: "01",
@@ -178,7 +189,10 @@ export default function HomePage() {
         </div>
       </div>
 
-      {/* ── 1c. NGO BRIEF ── */}
+      {/* ── 1c. FIELD IMPACT & OUTREACH GALLERY ── */}
+      <ImpactGallery />
+
+      {/* ── 1d. NGO BRIEF ── */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-start">
@@ -379,52 +393,46 @@ export default function HomePage() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              {
-                category: "Health Education",
-                title: "Understanding Antenatal Care: A Guide for Expectant Mothers",
-                desc: "A practical overview of what to expect during pregnancy and why early antenatal visits are critical to survival.",
-                href: "/resources/antenatal-guide",
-              },
-              {
-                category: "Clinical Brief",
-                title: "Telehealth in Rural Africa: Closing the Distance Gap",
-                desc: "How mobile-based clinical consultations are transforming access to skilled care in hard-to-reach communities.",
-                href: "/resources/telehealth-brief",
-              },
-              {
-                category: "Research",
-                title: "Community-Level Data Collection for Maternal Health Policy",
-                desc: "The role of frontline data in shaping evidence-based interventions and attracting institutional funding.",
-                href: "/resources/data-research",
-              },
-              {
-                category: "Network Update",
-                title: "Africa Nurses Network: Building Clinical Solidarity Across Borders",
-                desc: "How cross-border peer mentorship and knowledge exchange are strengthening Africa's nursing workforce.",
-                href: "/nurses-network",
-              },
-            ].map((item) => (
+            {latestPosts.map((item) => (
               <article
-                key={item.title}
-                className="group flex flex-col border border-[#E2E8F0] rounded-2xl overflow-hidden hover:border-[#0088D6]/40 hover:shadow-md transition-all duration-300"
+                key={item.id || item.slug}
+                className="group flex flex-col border border-[#E2E8F0] rounded-2xl overflow-hidden hover:border-[#0088D6]/40 hover:shadow-md transition-all duration-300 bg-white"
               >
-                {/* Category accent bar */}
-                <div className="h-1 bg-gradient-to-r from-[#D81B60] to-[#0088D6]" />
+                {/* Cover thumbnail or gradient bar */}
+                {item.image ? (
+                  <div className="relative aspect-[16/10] w-full bg-slate-900 overflow-hidden">
+                    <Image
+                      src={item.image}
+                      alt={item.title}
+                      fill
+                      className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                      sizes="(max-width: 768px) 100vw, 300px"
+                      unoptimized={item.image.startsWith("data:")}
+                    />
+                    <div className="absolute top-2.5 left-3">
+                      <span className="bg-[#D81B60] text-white text-[9px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full shadow-sm">
+                        {item.tag}
+                      </span>
+                    </div>
+                  </div>
+                ) : (
+                  <div className="h-1 bg-gradient-to-r from-[#D81B60] to-[#0088D6]" />
+                )}
 
                 <div className="flex flex-col flex-1 p-5 space-y-3">
-                  <span className="text-[10px] font-bold text-[#0088D6] uppercase tracking-widest">
-                    {item.category}
-                  </span>
-                  <h3 className="text-sm font-bold text-[#0D2B59] leading-snug group-hover:text-[#0088D6] transition-colors">
+                  <div className="flex items-center justify-between text-[11px] text-[#64748B]">
+                    <span>{item.date}</span>
+                    <span className="text-[#0088D6] font-semibold">{item.readTime}</span>
+                  </div>
+                  <h3 className="text-sm font-bold text-[#0D2B59] leading-snug group-hover:text-[#0088D6] transition-colors line-clamp-2">
                     {item.title}
                   </h3>
-                  <p className="text-xs text-[#64748B] leading-relaxed flex-1">
-                    {item.desc}
+                  <p className="text-xs text-[#64748B] leading-relaxed line-clamp-3 flex-1">
+                    {stripHtml(item.summary)}
                   </p>
                   <Link
-                    href={item.href}
-                    className="inline-flex items-center gap-1 text-[11px] font-bold text-[#D81B60] uppercase tracking-wider pt-1 hover:gap-2.5 transition-all"
+                    href={`/resources/${item.slug}`}
+                    className="inline-flex items-center gap-1 text-[11px] font-bold text-[#D81B60] uppercase tracking-wider pt-2 hover:gap-2.5 transition-all"
                   >
                     <span>Read Details</span>
                     <span>→</span>

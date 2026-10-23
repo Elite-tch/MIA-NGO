@@ -31,6 +31,9 @@ export default function Navbar() {
     { label: "Contact", href: "/contact" },
   ];
 
+  // Hide public Navbar on admin routes
+  if (pathname.startsWith("/admin")) return null;
+
   return (
     <>
       {/* Top Accreditation & Utility Strip */}

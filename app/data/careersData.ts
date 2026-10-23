@@ -1,0 +1,191 @@
+export interface CareerItem {
+  id: string;
+  slug: string;
+  type: "Paid" | "Volunteer" | "Fellowship";
+  title: string;
+  department: string;
+  location: string;
+  commitment: string;
+  deadline: string;
+  summary: string;
+  aboutRole: string;
+  responsibilities: string[];
+  requirements: string[];
+  applyEmail: string;
+  status?: "published" | "draft";
+}
+
+export const careersData: CareerItem[] = [
+  {
+    id: "job-1",
+    slug: "lead-clinical-midwife-coordinator",
+    type: "Paid",
+    title: "Lead Clinical Midwife Coordinator",
+    department: "Clinical Operations & Field Outreach",
+    location: "Field-Based / Sub-Saharan Africa",
+    commitment: "Full-Time (Renewable Contract)",
+    deadline: "November 30, 2026",
+    summary:
+      "Oversee community mobile clinical teams, supervise rural antenatal screenings, and train frontline midwives in emergency obstetric care protocols.",
+    aboutRole:
+      "The Lead Clinical Midwife Coordinator will direct on-the-ground mobile outreach missions in underserved communities, ensuring adherence to clinical safety standards and mentoring rural clinic midwives.",
+    responsibilities: [
+      "Lead multidisciplinary field teams during mobile clinic outreaches in remote settlements.",
+      "Conduct antenatal clinical triage and manage complex obstetric screening escalations.",
+      "Facilitate hands-on training sessions in clean delivery, hemorrhage management, and neonatal resuscitation.",
+      "Coordinate with district health authorities and referral hospital emergency wards.",
+      "Prepare monthly clinical performance reports and maternal health indicator data.",
+    ],
+    requirements: [
+      "Registered Midwife (RM) with valid clinical practicing license in an African country.",
+      "Minimum 5 years of active clinical experience in primary or tertiary obstetric care.",
+      "Demonstrated experience in rural healthcare delivery and community engagement.",
+      "Strong leadership, cross-cultural communication, and team mentorship skills.",
+      "Fluency in English; knowledge of regional languages is an added advantage.",
+    ],
+    applyEmail: "careers@maternalinitiativeafrica.org",
+  },
+  {
+    id: "job-2",
+    slug: "telehealth-clinical-nurse-specialist",
+    type: "Paid",
+    title: "Telehealth Clinical Nurse Specialist",
+    department: "Digital Health & Telemedicine",
+    location: "Hybrid / Pan-African Hub",
+    commitment: "Full-Time Permanent",
+    deadline: "December 15, 2026",
+    summary:
+      "Deliver real-time remote clinical consultations, triage emergency calls from rural health posts, and support digital obstetric decision-making.",
+    aboutRole:
+      "As part of MIA's digital health team, you will be the clinical voice on our telehealth platform, providing guidance to rural midwives managing complicated labors and answering mother inquiries.",
+    responsibilities: [
+      "Provide real-time telehealth triage and second-opinion consultations for rural clinic nurses.",
+      "Review electronic patient logs and monitor post-consultation maternal outcomes.",
+      "Deliver remote case-debriefing sessions for midwives following emergency deliveries.",
+      "Collaborate with software engineers to refine clinical workflows on the MIA mobile application.",
+      "Ensure patient records adhere strictly to clinical data privacy protocols.",
+    ],
+    requirements: [
+      "Registered Nurse (RN) with advanced training or diploma in midwifery or maternal health.",
+      "At least 3 years of clinical labor ward or community maternal triage experience.",
+      "Comfortable operating digital consultation software and electronic medical records.",
+      "Calm under pressure with excellent telephone and telemedicine diagnostic skills.",
+    ],
+    applyEmail: "careers@maternalinitiativeafrica.org",
+  },
+  {
+    id: "job-3",
+    slug: "community-maternal-health-educator",
+    type: "Volunteer",
+    title: "Community Maternal Health Educator",
+    department: "Community Outreach & Education",
+    location: "Local Community Outreaches (Regional)",
+    commitment: "Flexible Volunteer (4–8 hrs/week)",
+    deadline: "Rolling Application",
+    summary:
+      "Lead participatory village health literacy sessions, teach pregnancy danger signs, and guide mothers on birth preparedness.",
+    aboutRole:
+      "Community educators are the trusted bridge between rural families and formal healthcare. You will organize maternal health circles, nutrition demonstrations, and hygiene workshops under local community trees and centers.",
+    responsibilities: [
+      "Facilitate interactive workshops on nutrition, danger signs, and antenatal care schedules.",
+      "Distribute clean delivery kits and demonstrate proper hygienic usage to families.",
+      "Support mobile clinic registration and assist elderly or illiterate mothers.",
+      "Gather community feedback to help MIA improve outreach schedules and services.",
+    ],
+    requirements: [
+      "Passionate advocate for maternal and child health in underserved communities.",
+      "Background in community health, nursing, social work, or public health education.",
+      "Fluency in the local community language is essential.",
+      "Strong interpersonal skills and empathy for vulnerable families.",
+    ],
+    applyEmail: "volunteer@maternalinitiativeafrica.org",
+  },
+  {
+    id: "job-4",
+    slug: "maternal-epidemiology-data-fellow",
+    type: "Fellowship",
+    title: "Maternal Health Epidemiology Fellow",
+    department: "Research, Data & Policy",
+    location: "Remote / African Institutions",
+    commitment: "12-Month Fellowship (Stipend Provided)",
+    deadline: "January 10, 2027",
+    summary:
+      "Analyze frontline maternal indicator data, evaluate field intervention outcomes, and co-author institutional research reports.",
+    aboutRole:
+      "This fellowship offers early-career researchers and public health graduates hands-on experience analyzing large-scale grassroots maternal health datasets to inform continental policy.",
+    responsibilities: [
+      "Clean, aggregate, and analyze maternal health records collected from mobile clinics.",
+      "Prepare statistical dashboards tracking antenatal attendance and maternal complication rates.",
+      "Contribute to quarterly grant progress reports and institutional research publications.",
+      "Support data collection training for community health workers in the field.",
+    ],
+    requirements: [
+      "Master's degree (MPH, MSc) in Epidemiology, Biostatistics, or Global Health.",
+      "Proficiency in statistical software (R, Python, Stata, or SPSS).",
+      "Demonstrated interest in maternal and newborn health systems in Africa.",
+      "Strong academic writing and data visualization abilities.",
+    ],
+    applyEmail: "fellowships@maternalinitiativeafrica.org",
+  },
+  {
+    id: "job-5",
+    slug: "mobile-clinic-volunteer-nurse",
+    type: "Volunteer",
+    title: "Mobile Clinic Volunteer Staff Nurse",
+    department: "Field Healthcare Delivery",
+    location: "Designated Outreach Districts",
+    commitment: "Weekend / Mission-Based Volunteer",
+    deadline: "Rolling Application",
+    summary:
+      "Join MIA weekend mobile health teams to deliver prenatal screenings, administer vitamin supplements, and provide bedside clinical support.",
+    aboutRole:
+      "Give your weekends and leave days to save mothers in rural settlements. Join an energetic, multidisciplinary team of clinicians delivering direct primary care.",
+    responsibilities: [
+      "Perform antenatal checkups: blood pressure, fundal height, fetal heart rate monitoring.",
+      "Administer tetanus toxoid vaccinations and dispense prenatal vitamins.",
+      "Identify high-risk pregnancies and arrange direct referral pathways.",
+      "Educate young and first-time mothers on newborn care and exclusive breastfeeding.",
+    ],
+    requirements: [
+      "Qualified Nurse or Midwife with current registration in home country.",
+      "Willingness to travel to rural communities on scheduled outreach days.",
+      "Commitment to respectful, compassionate maternal care principles.",
+    ],
+    applyEmail: "volunteer@maternalinitiativeafrica.org",
+  },
+  {
+    id: "job-6",
+    slug: "grant-writing-partnerships-officer",
+    type: "Paid",
+    title: "Grant Writing & Partnerships Officer",
+    department: "Executive & Institutional Relations",
+    location: "Remote (Pan-African)",
+    commitment: "Full-Time",
+    deadline: "December 20, 2026",
+    summary:
+      "Develop institutional grant proposals, maintain funder relationships, and prepare donor accountability dossiers.",
+    aboutRole:
+      "Help MIA secure the institutional resources needed to scale. You will work closely with the Executive Director and Clinical Leadership to translate field impact into competitive grant proposals.",
+    responsibilities: [
+      "Identify and track funding opportunities from bilateral agencies, foundations, and trusts.",
+      "Draft comprehensive, evidence-driven grant applications and concept notes.",
+      "Coordinate with program and finance teams to prepare detailed project budgets.",
+      "Manage reporting schedules and compile milestone reports for existing grant makers.",
+    ],
+    requirements: [
+      "Bachelor's or Master's degree in International Development, Public Health, or related field.",
+      "Minimum 4 years of proven grant-writing success with global health or humanitarian NGOs.",
+      "Exceptional English writing, narrative framing, and proposal packaging skills.",
+      "Familiarity with multilateral grant compliance and logical framework approaches.",
+    ],
+    applyEmail: "careers@maternalinitiativeafrica.org",
+  },
+];
+
+export function getAllCareers() {
+  return careersData;
+}
+
+export function getCareerBySlug(slug: string): CareerItem | undefined {
+  return careersData.find((c) => c.slug === slug);
+}
