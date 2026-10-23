@@ -94,6 +94,7 @@ export default function FormattedTextarea({
       }
       quillRef.current = null;
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   // Sync external value changes (e.g. loading an edit)

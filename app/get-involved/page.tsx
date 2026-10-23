@@ -14,6 +14,7 @@ interface CareerItem {
   commitment: string;
   deadline: string;
   summary: string;
+  status?: "published" | "draft";
 }
 
 type CareerFilter = "All" | "Paid" | "Volunteer" | "Fellowship";
@@ -41,7 +42,7 @@ export default function GetInvolvedPage() {
     { label: "Clinical Fellowships", value: "Fellowship" },
   ];
 
-  const publicCareers = allCareers.filter((item) => (item as any).status !== "draft");
+  const publicCareers = allCareers.filter((item) => item.status !== "draft");
   const filteredCareers =
     activeFilter === "All"
       ? publicCareers

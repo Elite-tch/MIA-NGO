@@ -15,6 +15,7 @@ interface ResourceItem {
   image: string;
   summary: string;
   author: { name: string; role: string };
+  status?: "published" | "draft";
 }
 
 type CategoryFilter = "All" | "Health Education" | "Clinical Brief" | "Field Research" | "News & Campaigns";
@@ -80,7 +81,7 @@ export default function ResourcesPage() {
     "News & Campaigns",
   ];
 
-  const publicResources = allResources.filter((item) => (item as any).status !== "draft");
+  const publicResources = allResources.filter((item) => item.status !== "draft");
   const filteredResources =
     activeFilter === "All"
       ? publicResources

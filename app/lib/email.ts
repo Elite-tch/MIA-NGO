@@ -37,7 +37,7 @@ function generateHtmlTemplate(params: SendMailParams): string {
   });
 
   const fieldRows = Object.entries(fields)
-    .filter(([_, val]) => val !== undefined && String(val).trim().length > 0)
+    .filter(([, val]) => val !== undefined && String(val).trim().length > 0)
     .map(
       ([key, val]) => `
       <tr>

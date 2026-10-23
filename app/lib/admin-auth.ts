@@ -90,10 +90,15 @@ function safeEqual(a: string, b: string): boolean {
   return crypto.timingSafeEqual(bufA, bufB);
 }
 
-/** Verify password and 2FA security PIN against server environment variables */
+/** Verify password and 2FA security PIN strictly against server environment variables */
 export function verifyAdminCredentials(password: string, pin: string): boolean {
-  const expectedPassword = process.env.ADMIN_PASSWORD || "mia-admin-2026";
-  const expectedPin = process.env.ADMIN_SECURITY_PIN || "248690";
+  const expectedPassword = process.env.ADMIN_PASSWORD;
+  const expectedPin = process.env.ADMIN_SECURITY_PIN;
+
+  if (!expectedPassword || !expectedPin) {
+    console.error("[admin-auth] ADMIN_PASSWORD or ADMIN_SECURITY_PIN is not configured in .env.local.");
+    return false;
+  }
 
   const passOk = safeEqual(password, expectedPassword);
   const pinOk = safeEqual(pin, expectedPin);

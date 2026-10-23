@@ -192,6 +192,7 @@ export default function AdminDashboard() {
 
   useEffect(() => {
     fetchData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   // ── Toast Helper ──────────────────────────────────────────────────────────
