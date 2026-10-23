@@ -168,7 +168,7 @@ export default function ImageUpload({
 
           <div className="p-3 bg-white border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
             <span className="truncate max-w-[280px] font-mono text-[11px]">{value}</span>
-            <span className="text-emerald-600 font-bold flex items-center gap-1">
+            <span className="text-[#0088D6] font-bold flex items-center gap-1">
               <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
               </svg>

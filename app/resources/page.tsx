@@ -269,7 +269,7 @@ export default function ResourcesPage() {
               </div>
 
               {subscribeStatus === "ok" && (
-                <p className="text-emerald-300 text-xs font-semibold mt-3">
+                <p className="text-[#0088D6] bg-white text-xs font-bold px-4 py-1.5 rounded-full inline-block mt-3 shadow-sm">
                   ✓ {subscribeMsg}
                 </p>
               )}

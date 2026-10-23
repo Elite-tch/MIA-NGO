@@ -69,7 +69,7 @@ export default function AdminLoginPage() {
             </svg>
           </div>
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-white/80 text-[11px] font-bold uppercase tracking-wider mb-2 border border-white/15">
-            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+            <span className="w-2 h-2 rounded-full bg-[#0088D6] animate-pulse" />
             <span>2-Step Protected Portal</span>
           </div>
           <h1 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">Admin Portal</h1>

@@ -521,7 +521,7 @@ export default function AdminDashboard() {
           }`}
         >
           {toast.type === "ok" ? (
-            <svg className="w-5 h-5 text-emerald-400 shrink-0" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
+            <svg className="w-5 h-5 text-[#0088D6] shrink-0" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
             </svg>
           ) : (
@@ -719,7 +719,7 @@ export default function AdminDashboard() {
                 : "text-slate-200 hover:bg-white/10 hover:text-white"
             }`}
           >
-            <svg className="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
+            <svg className="w-4 h-4 text-[#0088D6]" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" d="M12 4v16m8-8H4" />
             </svg>
             <span>Create News or Education</span>
@@ -1058,7 +1058,7 @@ export default function AdminDashboard() {
                               className={`text-[10px] font-extrabold uppercase tracking-wider px-2.5 py-1 rounded-full ${
                                 item.status === "draft"
                                   ? "bg-amber-100 text-amber-700"
-                                  : "bg-emerald-100 text-emerald-800"
+                                  : "bg-[#0088D6]/10 text-[#0088D6] border border-[#0088D6]/20"
                               }`}
                             >
                               {item.status === "draft" ? "Draft" : "Published"}
@@ -1147,7 +1147,7 @@ export default function AdminDashboard() {
                       onClick={() => setPostStatusFilter("published")}
                       className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-colors whitespace-nowrap ${
                         postStatusFilter === "published"
-                          ? "bg-emerald-600 text-white"
+                          ? "bg-[#0088D6] text-white shadow-sm"
                           : "bg-slate-100 text-slate-600 hover:bg-slate-200"
                       }`}
                     >
@@ -1212,7 +1212,7 @@ export default function AdminDashboard() {
                                 className={`text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full shadow-md ${
                                   post.status === "draft"
                                     ? "bg-amber-500 text-white"
-                                    : "bg-emerald-600 text-white"
+                                    : "bg-[#0088D6] text-white"
                                 }`}
                               >
                                 {post.status === "draft" ? "Draft" : "Published"}
@@ -1403,7 +1403,7 @@ export default function AdminDashboard() {
                               className={`text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full ${
                                 career.status === "draft"
                                   ? "bg-amber-100 text-amber-700"
-                                  : "bg-emerald-100 text-emerald-800"
+                                  : "bg-[#0088D6]/10 text-[#0088D6] border border-[#0088D6]/20"
                               }`}
                             >
                               {career.status === "draft" ? "Draft" : "Published"}
@@ -1734,7 +1734,7 @@ export default function AdminDashboard() {
                         onClick={() => setRStatus("published")}
                         className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all ${
                           rStatus === "published"
-                            ? "bg-emerald-600 text-white shadow"
+                            ? "bg-[#0088D6] text-white shadow"
                             : "bg-slate-100 text-slate-600 hover:bg-slate-200"
                         }`}
                       >
@@ -2031,7 +2031,7 @@ export default function AdminDashboard() {
                         onClick={() => setCStatus("published")}
                         className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all ${
                           cStatus === "published"
-                            ? "bg-emerald-600 text-white shadow"
+                            ? "bg-[#0088D6] text-white shadow"
                             : "bg-slate-100 text-slate-600 hover:bg-slate-200"
                         }`}
                       >

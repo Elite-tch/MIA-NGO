@@ -170,8 +170,8 @@ export default function ContactPage() {
               </h2>
 
               {submitted ? (
-                <div className="p-8 bg-white border border-[#22C55E]/30 rounded-2xl text-center space-y-4">
-                  <div className="w-14 h-14 rounded-full bg-[#22C55E]/10 text-[#22C55E] mx-auto flex items-center justify-center text-2xl font-bold">
+                <div className="p-8 bg-white border border-[#0088D6]/30 rounded-2xl text-center space-y-4 shadow-sm">
+                  <div className="w-14 h-14 rounded-full bg-[#0088D6]/10 text-[#0088D6] border border-[#0088D6]/20 mx-auto flex items-center justify-center text-2xl font-bold">
                     ✓
                   </div>
                   <h3 className="text-xl font-bold text-[#0D2B59]">Thank You for Reaching Out</h3>
