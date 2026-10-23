@@ -63,15 +63,7 @@ export default function AdminLoginPage() {
       <div className={`w-full max-w-md ${shaking ? "animate-shake" : ""}`}>
         {/* Header */}
         <div className="text-center mb-8">
-          <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 mb-4 shadow-lg">
-            <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
-            </svg>
-          </div>
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-white/80 text-[11px] font-bold uppercase tracking-wider mb-2 border border-white/15">
-            <span className="w-2 h-2 rounded-full bg-[#0088D6] animate-pulse" />
-            <span>2-Step Protected Portal</span>
-          </div>
+         
           <h1 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">Admin Portal</h1>
           <p className="text-slate-300 text-xs sm:text-sm mt-1">Maternal Initiative Africa &bull; Authorised Personnel Only</p>
         </div>
