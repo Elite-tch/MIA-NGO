@@ -44,44 +44,65 @@ const teamMembers = [
   {
     name: "Nestory Millanzi",
     role: "Founder & Executive Director",
-    credentials: "RN, RM, Maternal Health Advocate",
-    image: "/outreach/outreach-1.jpg",
-    bio: "Nurse leader and maternal health advocate with deep grassroots clinical experience, dedicated to mobilizing continental solidarity to eliminate preventable maternal mortality.",
+    credentials: "RM - senior midwifery",
+    image: "/img1.jpg",
+    bio: "Senior registered midwife and healthcare advocate dedicated to uniting African nurses and midwives to end preventable maternal and neonatal mortality across underserved communities.",
   },
   {
-    name: "Dr. Amina Juma",
-    role: "Clinical Director & Lead Midwife",
-    credentials: "MPH, Senior Midwifery Specialist",
-    image: "/outreach/outreach-2.jpg",
-    bio: "Over 15 years directing primary obstetric care, antenatal screening initiatives, and clinical quality assurance in rural and peri-urban health centers.",
+    name: "Ishmael Paul",
+    role: "Director of Data & Research",
+    credentials: "RN, Senior Assistant Nursing Officer",
+    image: "/img2.jpg",
+    bio: "Registered nurse and clinical researcher leading health data surveillance, field analytics, and evidence-based reporting to guide MIA's primary healthcare programs and public health impact.",
   },
   {
-    name: "Grace Adebayo",
-    role: "Head of Community Outreach & Field Delivery",
-    credentials: "RN, Community Health Specialist",
-    image: "/outreach/outreach-5.jpg",
-    bio: "Leads on-the-ground mobile health teams, distribution of clean delivery kits, and participatory health education workshops for expectant mothers.",
+    name: "Suzana Gurti",
+    role: "Director of Human Resources",
+    credentials: "NO, Senior Nursing Officer",
+    image: "/img3.jpg",
+    bio: "Senior nursing officer managing clinical talent acquisition, nursing workforce welfare, professional development, and staff deployment across all MIA community outreach initiatives.",
   },
   {
-    name: "Tariq Mwangi",
-    role: "Director of Telehealth & Digital Innovation",
-    credentials: "Health Informatics Lead",
-    image: "/outreach/outreach-3.jpg",
-    bio: "Pioneering accessible, low-bandwidth mobile telemedicine tools to connect frontline community nurses with specialized obstetric consultants in real time.",
+    name: "Edson Lupogo",
+    role: "Director of Community Outreach",
+    credentials: "RN,Senior Assistant Nursing Officer",
+    image: "/img4.jpg",
+    bio: "Senior assistant nursing officer coordinating frontline mobile health teams, distribution of clean delivery kits, and direct community-level maternal health campaigns in remote rural areas.",
   },
   {
-    name: "Dr. Sarah Banda",
-    role: "Head of Research, Data & Policy",
-    credentials: "PhD, Epidemiologist & Health Systems Lead",
-    image: "/outreach/outreach-4.jpg",
-    bio: "Oversees community maternal indicator surveillance, ensuring MIA programs yield actionable data to guide public health policy and grant compliance.",
+    name: "Joseph Rwehumbiza",
+    role: "Director of Grants, Fundraising & Partnership",
+    credentials: "Experienced Accountant with CPA",
+    image: "/img5.jpg",
+    bio: "Certified public accountant spearheading resource mobilization, institutional funder relations, bilateral donor reporting, and financial compliance to support MIA's expanding outreach.",
   },
   {
-    name: "Kofi Mensah",
-    role: "Pan-African Nurse Network Coordinator",
-    credentials: "RN, Clinical Educator",
-    image: "/outreach/outreach-6.jpg",
-    bio: "Coordinates peer mentorship, knowledge exchange, and specialized clinical webinars across MIA's network of midwives and nurses across Sub-Saharan Africa.",
+    name: "Maria Shao",
+    role: "Director of Finance",
+    credentials: "Bachalor of Accountant",
+    image: "/imgg.jpg",
+    bio: "Directs fiscal planning, organizational budgeting, financial audit controls, and transparent resource allocation across all Maternal Initiative Africa programs and grant funds.",
+  },
+  {
+    name: "Rabeka Hadson",
+    role: "Manager & Strategic Advisor",
+    credentials: "Senior Registered Nurse & Anesthesia",
+    image: "/img6.jpg",
+    bio: "Specialized nurse anesthetist and healthcare manager advising leadership on clinical operating standards, critical obstetric risk protocols, and strategic organizational development.",
+  },
+  {
+    name: "Basilisa Shomvi",
+    role: "Director of Africa Nurses Network",
+    credentials: "RN, Senior Assistant Nursing Officer",
+    image: "/img7.jpg",
+    bio: "Experienced nursing officer overseeing peer mentorship, cross-border clinical knowledge exchange, specialized webinars, and professional networking for midwives and nurses across Africa.",
+  },
+  {
+    name: "Happiness Steven",
+    role: "Director of Education & Community Consultation",
+    credentials: "NO, Nursing Officer &  Senior Pediatric Nurse",
+    image: "/img8.jpg",
+    bio: "Senior pediatric nursing officer directing participatory community workshops, maternal-newborn health education, and local stakeholder consultations to improve child health outcomes.",
   },
 ];
 
@@ -162,7 +183,7 @@ export default function AboutPage() {
       {/* ── 3. WHO WE ARE & STORY + MISSION & VISION DIRECTLY UNDERNEATH ── */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
+
           {/* Main Story Narrative */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
             <div className="lg:col-span-4 lg:sticky lg:top-24">
@@ -289,18 +310,18 @@ export default function AboutPage() {
 
           {/* Team Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {teamMembers.map((member) => (
+            {teamMembers.map((member, idx) => (
               <div
-                key={member.name}
-                className="bg-[#F8FAFC] rounded-2xl overflow-hidden border border-[#E2E8F0] shadow-sm hover:shadow-md transition-all duration-300 flex flex-col"
+                key={`${member.name}-${member.image || idx}`}
+                className="group bg-[#F8FAFC] rounded-2xl overflow-hidden border border-[#E2E8F0] shadow-sm hover:shadow-md transition-all duration-300 flex flex-col"
               >
                 {/* Photo container */}
-                <div className="relative aspect-[4/3] w-full bg-slate-900 overflow-hidden">
+                <div className="relative aspect-[3/4] w-full bg-slate-900 overflow-hidden">
                   <Image
                     src={member.image}
                     alt={member.name}
                     fill
-                    className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                    className="object-cover object-top transition-transform duration-500"
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0D2B59]/70 via-transparent to-transparent" />

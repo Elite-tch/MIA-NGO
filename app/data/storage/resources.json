@@ -8,10 +8,6 @@
     "readTime": "5 min read",
     "image": "/outreach/outreach-1.jpg",
     "summary": "A practical overview of what expectant mothers should expect during routine prenatal visits, why early clinical contact is vital, and how to identify danger signs early.",
-    "author": {
-      "name": "Dr. Amina Juma",
-      "role": "Clinical Director, MIA"
-    },
     "content": {
       "intro": "Antenatal care (ANC) is more than healthcare visits; it is an essential lifeline that bridges expectant mothers with clinical expertise, nutritional support, and emergency obstetric preparedness.",
       "sections": [
@@ -35,53 +31,14 @@
         "Have an emergency transport plan agreed upon with family and community health workers."
       ]
     },
-    "_seeded": true
-  },
-  {
-    "date": "October 23, 2026",
-    "summary": "<h1>testing<strong><span class=\"ql-cursor\">﻿</span></strong></h1>",
-    "image": "https://res.cloudinary.com/dibwnfwk9/image/upload/v1792764569/bx5ctx5h0n9smyzjwzcd.jpg",
+    "_seeded": true,
     "author": {
-      "role": "Editorial & Medical Team",
-      "name": "MIA Clinical Communications"
-    },
-    "readTime": "3 min read",
-    "id": "res-1792764670320",
-    "slug": "testing",
-    "content": {
-      "intro": "<h1>testing<strong><span class=\"ql-cursor\">﻿</span></strong></h1>",
-      "takeaways": [],
-      "sections": []
-    },
-    "status": "published",
-    "tag": "Health Education",
-    "title": "testing 222",
-    "_updatedAt": {
-      "_seconds": 1792764719,
-      "_nanoseconds": 39000000
-    }
-  },
-  {
-    "date": "October 23, 2026",
-    "summary": "<p>rtyuik,</p>",
-    "image": "https://res.cloudinary.com/dibwnfwk9/image/upload/v1792766067/rbx4z0nqcnpkk58p8lyz.jpg",
-    "author": {
-      "role": "Editorial & Medical Team",
-      "name": "MIA Clinical Communications"
-    },
-    "readTime": "5 min read",
-    "id": "res-1792766080516",
-    "tag": "Clinical Brief",
-    "title": "second blog",
-    "slug": "second-blog",
-    "content": {
-      "intro": "<p>rtyuik,</p>",
-      "takeaways": [],
-      "sections": []
+      "role": "Consultation Director, MIA",
+      "name": "Happyness Steven"
     },
     "_updatedAt": {
-      "_seconds": 1792766106,
-      "_nanoseconds": 356000000
+      "_seconds": 1792819722,
+      "_nanoseconds": 160000000
     },
     "status": "published"
   },

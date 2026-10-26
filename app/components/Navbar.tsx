@@ -48,7 +48,7 @@ export default function Navbar() {
             </Link>
           </div>
           <div className="flex items-center gap-4 text-white/90">
-            <span className="hidden sm:inline">Official Mail: contact@maternalinitiativeafrica.org</span>
+            <span className="hidden sm:inline">Official Mail: millanzinestory2@gmail.com</span>
             <Link
               href="/partnerships"
               className="font-semibold text-[#E0F2FE] hover:text-white underline underline-offset-2 transition-colors"

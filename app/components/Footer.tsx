@@ -17,11 +17,7 @@ export default function Footer() {
           {/* Brand Col */}
           <div className="lg:col-span-2 space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#0D2B59] to-[#0088D6] p-0.5 flex items-center justify-center shadow-inner">
-                <div className="w-full h-full bg-[#0D2B59] rounded-[10px] flex items-center justify-center">
-                  <span className="text-[#0088D6] font-bold text-lg">M</span>
-                </div>
-              </div>
+
               <div>
                 <div className="flex items-center gap-1.5">
                   <span className="font-extrabold text-white text-base tracking-tight">
@@ -136,10 +132,10 @@ export default function Footer() {
               <p>
                 <strong className="text-white block text-xs uppercase tracking-wider text-slate-400">General & Grant Mail:</strong>
                 <a
-                  href="mailto:contact@maternalinitiativeafrica.org"
+                  href="mailto:millanzinestory2@gmail.com"
                   className="text-[#0088D6] hover:underline"
                 >
-                  contact@maternalinitiativeafrica.org
+                  millanzinestory2@gmail.com
                 </a>
               </p>
               <div className="pt-2">
@@ -156,21 +152,22 @@ export default function Footer() {
         </div>
 
         {/* Bottom Strip */}
-        <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+        <div className="pt-8 md:w-[60%] mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-400">
           <div>
             © {new Date().getFullYear()} Maternal Initiative Africa (MIA). All rights reserved.
           </div>
-          <div className="flex items-center gap-6">
-            <Link href="/about" className="hover:text-white transition-colors">
-              Governance & Ethics
-            </Link>
-            <Link href="/partnerships#transparency" className="hover:text-white transition-colors">
-              Accountability Standards
-            </Link>
-            <Link href="/contact" className="hover:text-white transition-colors">
-              Privacy & Safeguarding
-            </Link>
+          <div className="text-slate-400 text-center">
+            Designed & Developed by{" "}
+            <a
+              href="https://wa.me/2349135537940"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#D81B60] hover:text-white font-medium underline underline-offset-2 transition-colors"
+            >
+              Izuchukwu Johnbosco
+            </a>
           </div>
+         
         </div>
 
       </div>
